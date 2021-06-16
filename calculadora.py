@@ -14,7 +14,9 @@ abertura.title('Calculadora Investimento')
 abertura.header('Olá, vou te dar uma ideia do investimento para mudar a sua escola!')
 abertura.write('São apenas 3 perguntas, não tomarei nem 5 min do seu tempo :) Ao fim do questionário, se tiver interesse podemos colocar um consultor em contato.')
 abertura.write('Aproveite!')
-
+Resultado1=0
+Resultado2=0
+Resultado3=0
 
      
      
@@ -48,8 +50,14 @@ if nivelMedio:
 
 
 if (nivelFund1 and turmasFund1!=0 and alunosFund1!=0):
-    Resultado1 = st.write('Seu investimento para o Fundamental I será: R$', alunosFund1*199)
+    Resultado1 = alunosFund1*199
+    st.write('Seu investimento para o Fundamental I será: R$', Resultado1)
 if (nivelFund2 and turmasFund2!=0 and alunosFund2!=0):
-    Resultado2 = st.write('Seu investimento para o Fundamental I será: R$', turmasFund2*1299*8)
+    Resultado2 = turmasFund2*1299*8
+    st.write('Seu investimento para o Fundamental I será: R$', Resultado2)
 if (nivelMedio and turmasMedio!=0 and alunosMedio!=0):
-    Resultado3 = st.write('Seu investimento para o Fundamental I será: R$', turmasMedio*12900)
+    Resultado3 = turmasMedio*12900
+    st.write('Seu investimento para o Fundamental I será: R$', Resultado3)
+
+if (Resultado1!=0 or Resultado2!=0 or Resultado3!=0):
+    somaTotal= st.write('Investimento Total: R$', Resultado1+Resultado2+Resultado3)
